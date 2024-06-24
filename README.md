@@ -1,6 +1,6 @@
-# docdoc
+# DocDoc
 
-A new Flutter project.
+- The Appointment App.
 
 ## Getting Started
 
