@@ -1,0 +1,18 @@
+name: Pin Branch/Tag
+
+on:
+  push:
+    branches:
+      - 'development'
+    tags:
+      - 'v21'
+
+jobs:
+  pin-branch-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Pin Branch/Tag
+        uses: actions/labeler@v2
+        with:
+          label: 'pinned'
