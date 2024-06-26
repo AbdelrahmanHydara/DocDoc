@@ -4,9 +4,9 @@ import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/core/theming/my_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class DoNotHaveAnAccount extends StatelessWidget
+class AlreadyHaveAnAccount extends StatelessWidget
 {
-  const DoNotHaveAnAccount({super.key});
+  const AlreadyHaveAnAccount({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -16,15 +16,15 @@ class DoNotHaveAnAccount extends StatelessWidget
       children:
       [
         Text(
-          MyStrings.doNot,
+          MyStrings.already,
           style: MyTextStyles.font18DarkBlueMedium,
         ),
         TextButton(
           onPressed: () {
-            context.pushReplacementNamed(Routes.registerScreen);
+            context.pushReplacementNamed(Routes.loginScreen);
           },
           child: Text(
-            MyStrings.signUp,
+            MyStrings.login,
             style: MyTextStyles.font18PrimaryColorSemiBold,
           ),
         ),

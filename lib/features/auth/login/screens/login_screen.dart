@@ -30,9 +30,9 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const TitleAndSubtitleLogin(),
-                verticalSpace(40),
+                verticalSpace(45),
                 const EmailAndPassword(),
-                verticalSpace(25),
+                verticalSpace(30),
                 Align(
                   alignment: AlignmentDirectional.bottomEnd,
                   child: Text(
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                     style: MyTextStyles.font14PrimaryColorRegular,
                   ),
                 ),
-                verticalSpace(40),
+                verticalSpace(45),
                 MyTextButton(
                   buttonText: MyStrings.login,
                   textStyle: MyTextStyles.font16WhiteSemiMedium,
@@ -50,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                     }
                   },
                 ),
-                verticalSpace(10),
+                verticalSpace(25),
                 const TermsAndConditionsText(),
                 verticalSpace(60),
                 const DoNotHaveAnAccount(),
