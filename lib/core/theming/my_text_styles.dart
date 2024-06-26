@@ -77,6 +77,11 @@ class MyTextStyles {
     fontWeight: MyFontWeight.regular,
     color: MyColors.myPrimaryColor,
   );
+  static TextStyle font18PrimaryColorSemiBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: MyFontWeight.semiBold,
+    color: MyColors.myPrimaryColor,
+  );
   static TextStyle font18DarkBlueBold = TextStyle(
     fontSize: 18.sp,
     fontWeight: MyFontWeight.bold,
