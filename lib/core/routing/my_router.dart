@@ -1,7 +1,9 @@
 import 'package:docdoc/core/di/dependency_injection.dart';
 import 'package:docdoc/features/auth/login/cubit/login_cubit.dart';
 import 'package:docdoc/features/auth/login/screens/login_screen.dart';
+import 'package:docdoc/features/auth/register/cubit/register_cubit.dart';
 import 'package:docdoc/features/auth/register/screens/register_screen.dart';
+import 'package:docdoc/features/home/screens/home_screen.dart';
 import 'package:docdoc/features/onboarding/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,8 +27,12 @@ class MyRouter {
       case Routes.registerScreen :
         return MaterialPageRoute(
             builder: (_) => BlocProvider(
-                create: (BuildContext context) => getIt<LoginCubit>(),
+                create: (BuildContext context) => getIt<RegisterCubit>(),
                 child: const RegisterScreen())
+        );
+      case Routes.homeScreen :
+        return MaterialPageRoute(
+            builder: (_) => const HomeScreen()
         );
     }
     return null;
