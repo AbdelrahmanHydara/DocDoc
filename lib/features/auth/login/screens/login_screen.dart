@@ -2,10 +2,13 @@ import 'package:docdoc/core/components/my_text_button.dart';
 import 'package:docdoc/core/constants/my_strings.dart';
 import 'package:docdoc/core/helpers/spacing.dart';
 import 'package:docdoc/core/theming/my_text_styles.dart';
+import 'package:docdoc/features/auth/login/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'widgets/dont_have_an_account.dart';
 import 'widgets/email_and_password.dart';
+import 'widgets/login_bloc_listener.dart';
 import 'widgets/terms_and_conditions_text.dart';
 import 'widgets/title_and_subtitle_login.dart';
 
@@ -42,12 +45,16 @@ class LoginScreen extends StatelessWidget {
                   buttonText: MyStrings.login,
                   textStyle: MyTextStyles.font16WhiteSemiMedium,
                   onPressed: () {
+                    if(context.read<LoginCubit>().formKey.currentState!.validate()) {
+                      context.read<LoginCubit>().emitLoginState();
+                    }
                   },
                 ),
                 verticalSpace(10),
                 const TermsAndConditionsText(),
                 verticalSpace(60),
                 const DoNotHaveAnAccount(),
+                const LoginBlocListener(),
               ],
             ),
           ),

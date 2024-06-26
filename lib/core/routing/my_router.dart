@@ -1,6 +1,9 @@
+import 'package:docdoc/core/di/dependency_injection.dart';
+import 'package:docdoc/features/auth/login/cubit/login_cubit.dart';
 import 'package:docdoc/features/auth/login/screens/login_screen.dart';
 import 'package:docdoc/features/onboarding/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'routes.dart';
 
 class MyRouter {
@@ -14,7 +17,9 @@ class MyRouter {
         );
       case Routes.loginScreen :
         return MaterialPageRoute(
-            builder: (_) => const LoginScreen()
+            builder: (_) => BlocProvider(
+                create: (BuildContext context) => getIt<LoginCubit>(),
+                child: const LoginScreen())
         );
       default :
         return MaterialPageRoute(
