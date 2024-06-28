@@ -17,14 +17,12 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
             current is Specializationssuccess || current is Specializationserror,
         builder: (context, state) {
           return state.maybeWhen(
-            specializationLoading: () {
-              return setupLoading();
-            },
+            specializationLoading: () => setupLoading(),
             specializationsSuccess: (specializationResponseModel) {
               var specializationList = specializationResponseModel.SpecializationDataList;
               return setupSuccess(specializationList);
             },
-            specializationsError: (errorHandler) => const SizedBox.shrink(),
+            specializationsError: (errorHandler) => setupError(),
             orElse: () => const SizedBox.shrink(),
           );
         }
@@ -51,4 +49,6 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
       ],
     ),
   );
+
+  Widget setupError() => const SizedBox.shrink();
 }
