@@ -5,6 +5,8 @@ import 'package:docdoc/features/auth/login/cubit/login_cubit.dart';
 import 'package:docdoc/features/auth/login/data/repository/login_repository.dart';
 import 'package:docdoc/features/auth/register/cubit/register_cubit.dart';
 import 'package:docdoc/features/auth/register/data/repository/register_repository.dart';
+import 'package:docdoc/features/home/data/apis/home_api_service.dart';
+import 'package:docdoc/features/home/data/repository/home_repository.dart';
 import 'package:get_it/get_it.dart';
 
 
@@ -22,5 +24,9 @@ Future<void> setupGetIt() async {
   // register
   getIt.registerLazySingleton<RegisterRepository>(() => RegisterRepository(getIt()));
   getIt.registerFactory<RegisterCubit>(() => RegisterCubit(getIt()));
+
+  // home
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getIt.registerLazySingleton<HomeRepository>(() => HomeRepository(getIt()));
 
 }

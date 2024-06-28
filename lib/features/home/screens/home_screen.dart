@@ -1,10 +1,9 @@
 import 'package:docdoc/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
-import 'widgets/doctor_speciality_list_view.dart';
 import 'widgets/doctor_speciality_see_all.dart';
 import 'widgets/doctors_blue_container.dart';
-import 'widgets/doctors_list_view.dart';
 import 'widgets/home_top_bar.dart';
+import 'widgets/specializations_and_doctors_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,9 +24,7 @@ class HomeScreen extends StatelessWidget {
               verticalSpace(24),
               const DoctorSpecialitySeeAll(),
               verticalSpace(18),
-              const DoctorSpecialityListView(),
-              verticalSpace(8),
-              const DoctorsListView(),
+              SpecializationsAndDoctorsBlocBuilder(),
             ],
           ),
         ),
