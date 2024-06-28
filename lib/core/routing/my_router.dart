@@ -3,6 +3,7 @@ import 'package:docdoc/features/auth/login/cubit/login_cubit.dart';
 import 'package:docdoc/features/auth/login/screens/login_screen.dart';
 import 'package:docdoc/features/auth/register/cubit/register_cubit.dart';
 import 'package:docdoc/features/auth/register/screens/register_screen.dart';
+import 'package:docdoc/features/home/cubit/home_cubit.dart';
 import 'package:docdoc/features/home/screens/home_screen.dart';
 import 'package:docdoc/features/onboarding/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,9 @@ class MyRouter {
         );
       case Routes.homeScreen :
         return MaterialPageRoute(
-            builder: (_) => const HomeScreen()
+            builder: (_) => BlocProvider(
+                create: (BuildContext context) => HomeCubit(getIt())..getSpecializations(),
+                child: const HomeScreen())
         );
     }
     return null;
