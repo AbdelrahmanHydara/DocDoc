@@ -24,7 +24,7 @@ class DocDocApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: Routes.homeScreen,
         onGenerateRoute: MyRouter.generateRoute,
         theme: myLightTheme(),
       ),

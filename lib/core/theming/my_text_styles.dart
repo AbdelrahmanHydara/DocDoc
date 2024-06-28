@@ -104,6 +104,11 @@ class MyTextStyles {
     fontWeight: MyFontWeight.bold,
     color: MyColors.myBlack,
   );
+  static TextStyle font20WhiteMedium = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: MyFontWeight.medium,
+    color: MyColors.myWhite,
+  );
 
   static TextStyle font26PrimaryColorBold = TextStyle(
     fontSize: 26.sp,
