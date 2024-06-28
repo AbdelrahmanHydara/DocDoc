@@ -18,7 +18,7 @@ class DoctorsListView extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(12.r),
                     child: Image.network(
-                        "",
+                      "",
                       fit: BoxFit.cover,
                       width: 110.w,
                       height: 120.h,
