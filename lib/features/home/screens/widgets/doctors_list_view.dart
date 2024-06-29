@@ -10,6 +10,7 @@ class DoctorsListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: ListView.builder(
+          physics: const BouncingScrollPhysics(),
           itemBuilder: (context, index) {
             return DoctorsListViewItem(
               doctorsModel: doctorsList?[index],

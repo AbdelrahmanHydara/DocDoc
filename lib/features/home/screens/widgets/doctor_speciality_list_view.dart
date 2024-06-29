@@ -12,14 +12,15 @@ class DoctorSpecialityListView extends StatelessWidget {
     return SizedBox(
       height: 100.h,
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return DoctorsSpecialityListViewItem(
-            itemIndex: index,
-            specializationsData: specializationDataList[index],
+          physics: const BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return DoctorsSpecialityListViewItem(
+              itemIndex: index,
+              specializationsData: specializationDataList[index],
           );
-        },
-        itemCount: specializationDataList.length
+            },
+          itemCount: specializationDataList.length
       ),
     );
   }
