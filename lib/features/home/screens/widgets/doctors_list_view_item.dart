@@ -17,7 +17,7 @@ class DoctorsListViewItem  extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12.r),
             child: Image.network(
-              "https://img.freepik.com/free-photo/asian-young-main-group-hospital-professional_1291-37.jpg?w=1380&t=st=1719577981~exp=1719578581~hmac=3af09b73d5b48dcc4b5df0a40307ac7ad59fdff19b30ddcdb7c9b206401dce62",
+              "https://img.freepik.com/free-photo/doctor-nurses-special-equipment_23-2148980721.jpg?t=st=1719622621~exp=1719626221~hmac=7891c8b11e95da9aacafe262e4970ed4ffd5468b71ff8bd766df29107129a780&w=996",
               fit: BoxFit.cover,
               width: 150.w,
               height: 125.h,
