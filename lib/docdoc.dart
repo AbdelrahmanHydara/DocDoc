@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'core/helpers/constants.dart';
 import 'core/routing/my_router.dart';
 import 'core/routing/routes.dart';
 import 'core/theming/my_colors.dart';
@@ -19,12 +20,13 @@ class DocDocApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
       ),
     );
+
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.homeScreen,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
         onGenerateRoute: MyRouter.generateRoute,
         theme: myLightTheme(),
       ),
