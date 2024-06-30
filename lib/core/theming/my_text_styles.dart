@@ -45,6 +45,11 @@ class MyTextStyles {
     fontWeight: MyFontWeight.medium,
     color: MyColors.myDarkBlue,
   );
+  static TextStyle font14DarkBlueBold = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: MyFontWeight.bold,
+    color: MyColors.myDarkBlue,
+  );
   static TextStyle font14DarkBlueRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: MyFontWeight.regular,
