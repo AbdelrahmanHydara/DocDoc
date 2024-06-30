@@ -1,7 +1,7 @@
+import 'package:docdoc/features/auth/register/data/models/register_request_body.dart';
+import 'package:docdoc/features/auth/register/data/repository/register_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../data/models/register_request_body.dart';
-import '../data/repository/register_repository.dart';
 import 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
