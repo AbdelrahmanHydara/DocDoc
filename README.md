@@ -2,15 +2,14 @@
 
 - 👨🏽‍⚕️ Best Doctor Appointment App . 
 
-## Getting Started
+# :blue_book: Overview
 
-This project is a starting point for a Flutter application.
+- Bloc State Management
+- Clean Architecture with Bloc
+- Using Apis 
+- Using Flavors
+- Save and Secure Token
 
-A few resources to get you started if this is your first Flutter project:
+# :iphone: Screens
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="5860" alt="Group 18" src="https://github.com/user-attachments/assets/19f06d59-750d-470a-9b84-a6705870a951">
